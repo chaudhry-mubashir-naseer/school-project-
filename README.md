@@ -260,16 +260,7 @@ This project uses MySQL/MariaDB with the schema defined in `sms_db.sql`.
 - `student_score` records academic results by `student_id`, `teacher_id`, `subject_id`, `year`, and `semester`
 - `setting` stores school configuration data such as name, slogan, year, and semester
 
-```mermaid
-erDiagram
-    STUDENTS ||--o{ STUDENT_SCORE : has
-    TEACHERS ||--o{ STUDENT_SCORE : records
-    SUBJECTS ||--o{ STUDENT_SCORE : graded_as
-    GRADES ||--o{ STUDENTS : contains
-    SECTION ||--o{ STUDENTS : contains
-    GRADES ||--o{ CLASS : grouped_in
-    SECTION ||--o{ CLASS : grouped_in
-```
+
 
 ---
 
